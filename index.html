@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Stacy Ndugire - Medical Laboratory Science Student & Full-time Freelancer">
+    <title>Stacy Ndugire | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo">Stacy<span class="accent">N</span></div>
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-links">
+                <li class="cancel-icon" id="cancel-icon">&times;</li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text fade-left">
+            <h1>Medical Lab Student • Full-time Freelancer</h1>
+            <p>Web Developer & Data Analyst</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn accent-btn">Hire Me</a>
+                <a href="#projects" class="btn">View Work</a>
+            </div>
+        </div>
+        <div class="hero-image fade-right">
+            <img src="profile.jpeg" alt="Stacy Ndugire" />
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            Hi, I’m Stacy Ndugire, a Medical Laboratory Science student with a passion for technology and creativity. 
+            I balance my academic life with a thriving career as a full-time freelancer specializing in web development, 
+            data analysis, and graphic design. I love building solutions that blend science, tech, and design.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+        <h2>Specialties</h2>
+        <div class="skills-grid" data-stagger="100">
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <p>Responsive, modern, and user-friendly websites.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Data Analysis</h3>
+                <p>Data-driven insights and interactive dashboards.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Graphic Design</h3>
+                <p>Creative posters, profile designs, and branding materials.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Branding</h3>
+                <p>Custom designs that make your brand stand out.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid" data-stagger="150">
+            <div class="project-card flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://via.placeholder.com/350x200" alt="Project 1">
+                        <h3>Portfolio Website</h3>
+                        <p>Custom personal portfolio for a client.</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Portfolio Website</h3>
+                        <p>View the full project:</p>
+                        <a href="https://example.com/portfolio" target="_blank" rel="noopener noreferrer">Visit Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://via.placeholder.com/350x200" alt="Project 2">
+                        <h3>Data Dashboard</h3>
+                        <p>Interactive data visualization for a health project.</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Data Dashboard</h3>
+                        <p>View the full project:</p>
+                        <a href="https://example.com/data-dashboard" target="_blank" rel="noopener noreferrer">Visit Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://via.placeholder.com/350x200" alt="Project 3">
+                        <h3>Poster Design</h3>
+                        <p>Eye-catching poster for a brand campaign.</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Poster Design</h3>
+                        <p>View the full project:</p>
+                        <a href="https://example.com/poster-design" target="_blank" rel="noopener noreferrer">Visit Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://via.placeholder.com/350x200" alt="Project 4">
+                        <h3>Profile Branding</h3>
+                        <p>Full branding kit for a startup.</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Profile Branding</h3>
+                        <p>View the full project:</p>
+                        <a href="https://example.com/profile-branding" target="_blank" rel="noopener noreferrer">Visit Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT SECTION -->
+<section id="contact" class="contact-section fade-up">
+    <div class="contact-container">
+        <h2>Get In Touch</h2>
+        <form action="#" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="contact-btn">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p>Instagram: <a href="https://instagram.com/wanjikubrians" target="_blank" rel="noopener noreferrer">@wanjikubrians</a></p>
+            <p>WhatsApp: <a href="https://wa.me/254791710423" target="_blank" rel="noopener noreferrer">0791710423</a></p>
+            <p>Email: <a href="mailto:wanjikubrians11@gmail.com">wanjikubrians11@gmail.com</a></p>
+        </div>
+    </div>
+</section>
+
+
+
+    <footer>
+        <p>&copy; 2025 Stacy Ndugire | All Rights Reserved</p>
+    </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* --------- Simple observer for hero sides (left/right) --------- */
+    const sideObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.fade-left, .fade-right').forEach(el => {
+        sideObserver.observe(el);
+    });
+
+    /* --------- Ensure fade-up is on skills, projects, and contact --------- */
+    document.querySelectorAll('.skills-grid .skill-card, .projects-grid .project-card, #contact')
+        .forEach(el => el.classList.add('fade-up'));
+
+    /* --------- Group observer to stagger child reveals --------- */
+    const groupObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const container = entry.target;
+
+            // Choose children depending on container type
+            let children;
+            if (container.classList.contains('skills-grid')) {
+                children = container.querySelectorAll('.skill-card');
+            } else if (container.classList.contains('projects-grid')) {
+                children = container.querySelectorAll('.project-card');
+            } else if (container.id === 'contact') {
+                children = container.querySelectorAll('.contact-form *');
+            } else {
+                children = container.querySelectorAll('.fade-up');
+            }
+
+            // Per-container stagger (ms)
+            const stagger = parseInt(container.dataset.stagger) || 120;
+
+            children.forEach((child, i) => {
+                child.style.setProperty('--delay', `${i * stagger}ms`);
+                setTimeout(() => child.classList.add('fade-in'), i * stagger);
+            });
+
+            obs.unobserve(container);
+        });
+    }, { threshold: 0.12 });
+
+    // Observe skills, projects, and contact
+    document.querySelectorAll('.skills-grid, .projects-grid, #contact').forEach(container => {
+        groupObserver.observe(container);
+    });
+
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>

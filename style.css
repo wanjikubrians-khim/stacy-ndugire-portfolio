@@ -1,0 +1,531 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #1E3A8A;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+/* Header */
+header {
+    background: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #eee;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    height: 3px;
+    background: #1E3A8A;
+    border-radius: 2px;
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+    nav ul {
+        display: none !important;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        padding: 10px 0;
+        z-index: 200;
+    }
+
+    nav ul.show {
+        display: flex !important;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 10px 20px;
+    }
+
+    nav ul li a {
+        color: #1E3A8A;
+        font-weight: 600;
+    }
+
+    /* Cancel icon - positioned at top with prominent styling */
+    .cancel-icon {
+        display: block !important;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 35px;
+        height: 35px;
+        background: #05e3ef;
+        color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 35px;
+        text-align: center;
+        z-index: 999;
+        transition: all 0.3s ease;
+        margin: 0;
+        padding: 0;
+        -webkit-user-select: none;
+        user-select: none;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .cancel-icon:hover {
+        background: #0810ef;
+        transform: scale(1.1);
+        box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    }
+
+    /* Adjust nav positioning to accommodate cancel icon */
+    nav ul {
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.accent {
+    color: cyan;
+}
+
+/* Hide cancel icon on desktop */
+.cancel-icon {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+nav ul li a {
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: cyan;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; /* Push text and image apart */
+    gap: 2rem;
+    background-color: #f9fafb;
+    padding: 4rem 2rem;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #1E3A8A;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    border: 2px solid #1E3A8A;
+    color: #1E3A8A;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #1E3A8A;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(30, 58, 138, 0.3);
+}
+
+/* Accent button */
+.accent-btn {
+    background: cyan;
+    border: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.accent-btn:hover {
+    background: #00e5ff;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 229, 255, 0.5);
+}
+
+/* Right-side image */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 0 25px cyan, 0 0 50px rgba(0, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px cyan, 0 0 70px rgba(0, 255, 255, 0.7);
+}
+
+/* Scroll animation setup */
+.fade-left,
+.fade-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-left {
+    transform: translateX(-50px);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsive for hero */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image {
+        order: -1; /* Image appears above text on mobile */
+    }
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: #f3f4f6;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    perspective: 1000px; /* Needed for 3D flip */
+}
+
+.project-card {
+    background: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 10px;
+    position: relative;
+    height: 300px; /* Fixed height for flip card */
+    perspective: 1000px; /* Needed for 3D flip */
+}
+
+.project-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Flip card inner container */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Flip card inner container */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Front and back faces */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Front face */
+.flip-card-front {
+    background: #fff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Back face */
+.flip-card-back {
+    background: #1E3A8A;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.flip-card-back a {
+    color: #00e5ff;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+
+.flip-card-back a:hover {
+    color: #00b8e6;
+}
+/* Fade-up for cards (skills & projects) */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    /* allow optional per-element delay via --delay */
+    transition-delay: var(--delay, 0ms);
+    will-change: opacity, transform;
+}
+
+.fade-up.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .fade-up, .fade-left, .fade-right, .hero-image img {
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #ebeff0 0%, #f8f9f9 50%, #d0f2f6 100%);
+    text-align: center;
+    position: relative;
+    overflow: visible;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.contact-section.fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Add subtle pattern overlay */
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.3), transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(244, 247, 247, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(231, 243, 233, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: auto;
+    background: rgb(85, 241, 241); /* White background */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0, 89, 255, 0.3); /* Subtle gold glow */
+    border: 2px solid rgba(12, 224, 239, 0.5);
+    animation: none;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes glowPulse {
+    from {
+        box-shadow: 
+            0 0 15px rgba(255, 215, 0, 0.3),
+            0 0 30px rgba(255, 215, 0, 0.1),
+            inset 0 0 10px rgba(255, 215, 0, 0.05);
+    }
+    to {
+        box-shadow: 
+            0 0 35px rgba(255, 215, 0, 0.6),
+            0 0 70px rgba(255, 215, 0, 0.3),
+            inset 0 0 25px rgba(255, 215, 0, 0.15);
+    }
+}
+
+.contact-section h2 {
+    color: #1E3A8A; /* Dark blue matching headings */
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #f3f4f6; /* Light gray background */
+    border: 1px solid rgba(30, 58, 138, 0.3); /* Blue border */
+    border-radius: 10px;
+    color: #111; /* Dark text */
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: gold;
+}
+
+.contact-btn {
+    background: #1E3A8A; /* Dark blue button */
+    color: #fff;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-btn:hover {
+    background: rgb(0, 26, 255); /* Cyan hover */
+    transform: translateY(-3px);;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #f3f4f6;
+    color: #6B7280;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+}
